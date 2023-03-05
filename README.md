@@ -19,4 +19,4 @@ This repository has some basic React challenges that will help you clarify basic
           I found out that maintain several states across different function component causes React to re-render multiple times causing infinite loop.
 
 
-    check out an example here.
+    [check out an example here.](https://github.com/Ankhi12/ReactExercises/blob/main/multipleFuncCompoments.html)
