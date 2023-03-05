@@ -10,13 +10,13 @@ This repository has some basic React challenges that will help you clarify basic
         Points to note
 
           a. There should be only one function component that will deal with state management.
-          b. You can pass a state as a prop to the function component maintaining states.
-          c. You can call another function component from a function component inside the JSX section of the later.
-          d. You can then modify the JSX of the called component as per your requirement.
+          b. You can pass a state as a prop to the dependent function component.
+          c. You can call the dependent function component from the main function component inside the JSX section of the later.
+          d. You can then modify the JSX of the dependent function component as per your requirement.
 
         Caution
 
-          I found out that maintain several states across different function component causes React to re render multiple times and React going into an infinite loop.
+          I found out that maintain several states across different function component causes React to re-render multiple times causing infinite loop.
 
 
     check out an example here.
