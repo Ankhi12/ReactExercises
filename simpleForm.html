@@ -1,0 +1,145 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            React Forms
+        </title>
+        </head>
+    <body>
+        <div id = "root">
+        </div>
+        <script src=""> <!-- Insert the path to your locally downloaded React Development Library here -->
+        </script>
+        <script src=""></script> <!-- Insert the path to your locally downloaded React DOM Library here -->
+        <script src=""></script> <!-- Insert the path to your locally downloaded Babel Library here -->
+
+        <script type="text/babel">
+        
+            const roothandle = document.getElementById("root")
+
+            const {useState} = React
+
+            const App = (props)=>{
+            
+            const[text, setTeaxt] = useState('')
+            const[date, setDate] = useState('')
+            const[taskType, setTasktype] = useState('') 
+            const[taskDependency, setTaskDependency] = useState('')
+            const[accept, setAccept] = useState(false)
+            const[error, setError] = useState({})
+
+            const formLocalvar = {} // Local variable for error handling
+
+            const changeText = (e)=>{  // A common event handler for event target having value property - To reduce lines of codes
+               
+                if(e.target.name === "taskName"){
+                setTeaxt(e.target.value)
+                }
+                
+                if(e.target.name === "taskDate"){
+                setDate(e.target.value)
+                }
+
+                if(e.target.name === "taskType"){
+                setTasktype(e.target.value)
+                }
+
+                if(e.target.name === "dependencies"){
+                    setTaskDependency(e.target.value)
+                }
+            } 
+
+            const handleAccept = (e)=>{ // This event handler is for the checkBox
+                setAccept(e.target.checked)
+            }
+
+            const validate = ()=>{ // A function for form validation and updating the local form error variable.
+
+                if(text.trim().length === 0){
+
+                    formLocalvar.taskName = "Task name should not be blank!"
+                    
+                }
+
+                if(!date){
+                   
+                    formLocalvar.taskDate = "Date should not be blank!"
+
+                }
+
+                if(!taskType){
+                   
+                   formLocalvar.taskType = "Select the task type"
+
+               }
+
+            }
+            const Submit = (e)=>{
+
+               
+
+                if(!Object.keys(formLocalvar).length === 0){ // Here checking if there is any local formLocalvar value present on form submission
+                
+                    setError({})  // If no error, the error state is set with null object
+                    const formData = {
+                    taskName: text,
+                    taskDate: date,
+                    taskType: taskType,
+                    dependencies: taskDependency,
+                    accept: accept
+                    
+                }
+             
+                }
+                else{ // If there is a validation error the state error is set and will be used in the UI
+                    
+                    setError(formLocalvar)
+                }
+
+                validate()
+               
+            }
+                return(
+                    <div style={{margin: "auto", width: "70%", padding: "10px", textAlign: "center", boxSizing: "border-box", width: "80%", height: "100%", border: "20px solid #969696", marginTop:"50px"}}>
+                        
+                        <form onSubmit= {Submit}>
+                        <label><strong>Enter your task: </strong></label>
+                        <input type="text" value={text} onChange={changeText} placeholder="Enter your task" name="taskName"/> {error.taskName && <span style={{color: "red"}}>{error.taskName}</span>}<br/> <br/>
+
+                        <label> <strong> Select a date: </strong></label>
+                        <input type="date" value={date} onChange={changeText} placeholder="Enter your task" name="taskDate"/> {error.taskDate && <span style={{color: "red"}}>{error.taskDate} </span>}<br/> <br/>
+
+                        <label> <strong> Task Type: </strong> </label>
+                        <input type="radio" name="taskType" value="Outdoor" checked={taskType ==="Outdoor"} onChange = {changeText}/> Outdoor 
+                        <input type="radio" name="taskType" value="Indoor" onChange = {taskType === "Indoor"}/> Indoor <br/> <br/>
+
+                        <label> <strong> Select linked tasks: </strong></label>
+                        <select name="dependencies" value={taskDependency} onChange={changeText}>
+                        <option value=""> Select</option>
+                        <option value="Task 1">Task 1</option>
+                        <option value="Task 2">Task 2</option>
+                        <option value="Task 3">Task 3</option>
+                        <option value="Task 4">Task 4</option>
+                        </select> <br/>
+                        <br/>
+                        <br/>
+
+                        <input type="checkbox" checked={accept} onChange={handleAccept}/> Get help: Text-to-Speech <br/> <br/>
+                        <input type="submit" value="Submit" disabled={!accept}/> 
+                        
+                        </form>
+
+
+                        
+                    </div>
+                )
+            }
+           
+            ReactDOM.render(<App/>,roothandle)
+        </script>
+    </body>
+</html>
