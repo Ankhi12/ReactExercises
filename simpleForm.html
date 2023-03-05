@@ -1,7 +1,4 @@
 
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,8 +7,7 @@
         </title>
         </head>
     <body>
-        <div id = "root">
-        </div>
+        <div id = "root"></div>
         <script src=""> <!-- Insert the path to your locally downloaded React Development Library here -->
         </script>
         <script src=""></script> <!-- Insert the path to your locally downloaded React DOM Library here -->
@@ -21,7 +17,7 @@
         
             const roothandle = document.getElementById("root")
 
-            const {useState} = React
+            const {useState} = React // React Hook
 
             const App = (props)=>{
             
@@ -132,8 +128,6 @@
                         <input type="submit" value="Submit" disabled={!accept}/> 
                         
                         </form>
-
-
                         
                     </div>
                 )
