@@ -1,0 +1,99 @@
+<!--
+
+Main Function Component - App
+
+Dependent Function Component - ImageComp
+
+Logic - 
+
+A button exists in the App  component where the state is maintained and the ImageComp is called.
+So the ImageComp should update the UI based on the button click event on the App component.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+           Multiple Function Components
+        </title>
+        </head>
+    <body>
+        <div id = "root">
+        </div>
+        <script src=""></script> <!--Insert path to your locally downloaded React Development JS file here -->
+        <script src=""></script> <!--Insert path to your locally downloaded React DOM JS file here -->
+        <script src=""></script> <!--Insert path to your locally downloaded Babel JS file here -->
+
+        <script type="text/babel">
+        
+        
+            const roothandle = document.getElementById("root")
+            
+            const {useState} = React
+
+            const ImgComp = (props)=>{
+            
+                if(!props.textObj.text){
+                    return(
+                        <div>
+                        <p></p>   
+                    </div> 
+                    )
+                }
+                
+                return(
+                    <div>
+                        <p>{props.textObj.text} <img src={props.textObj.imgsrc} style={{height:'20px', width: '20px'}} alt=""/></p>
+                    
+                    </div>
+                )
+
+            }
+            
+            const App = (props)=>{
+
+                const [textObj, setTextObj] = useState({text:'', imgsrc:""})
+
+                function bottonclick(){
+                    
+                    const a = prompt('Enter a make me string')
+                    
+                    if(!a){
+                        setTextObj({text: 'Enter a valid emotions!'})
+
+                        return
+                    }
+                    if(a.toLowerCase() == "smile"){
+                        
+                        setTextObj({text:'make me',imgsrc:"158430.png"}) // imgsrc --> Replace the string value with a relevant image path stored in your computer.
+                       
+                    }
+                    else if(a.toLowerCase() == "grin"){
+
+                        setTextObj({text:'make me',imgsrc: "download.png"}) // imgsrc --> Replace the string value with a relevant image path stored in your computer.
+                    }
+
+                    else if(a.toLowerCase() == 'angry'){
+
+                        setTextObj({text:'make me',imgsrc: "images.png"}) // imgsrc --> Replace the string value with a relevant image path stored in your computer.
+                    }
+                    else{
+
+                        setTextObj({})
+                    }
+                }
+                
+                return(
+                    <div >
+                        <ImgComp textObj={textObj}/>
+                        <button onClick={bottonclick}> Make string </button>
+                        
+                    </div>
+                )
+
+            }
+           
+            ReactDOM.render(<App/>,roothandle)
+        </script>
+    </body>
+</html>
