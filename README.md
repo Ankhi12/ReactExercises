@@ -7,16 +7,26 @@ This repository has some basic React challenges that will help you clarify basic
 
 2. How does two React function components talk to each other.
 
-        Points to note
-
-          a. There should be only one function component that will deal with state management.
-          b. You can pass a state as a prop to the dependent function component.
-          c. You can call the dependent function component from the main function component inside the JSX section of the later.
-          d. You can then modify the JSX of the dependent function component as per your requirement.
-
-        Caution
-
-          I found out that maintain several states across different function component causes React to re-render multiple times causing infinite loop.
+        Points to note -
+        
+          a. You can pass a state as a prop to the dependent function component.
+          b. You can call the dependent function component from the main function component inside the JSX section of the later.
+          c. You can then modify the JSX of the dependent function component as per your requirement.
 
 
     [check out an example here.](https://github.com/Ankhi12/ReactExercises/blob/main/multipleFuncCompoments.html)
+    
+    2. Customer DashBoard
+    
+  ![image](https://user-images.githubusercontent.com/124775002/226119420-b1d21068-b7ea-417d-ad78-076f35fb79d4.png)
+  
+  
+![image](https://user-images.githubusercontent.com/124775002/226119456-bc88e39b-2c87-4ef1-a98a-05fdd70e6475.png)
+
+
+![image](https://user-images.githubusercontent.com/124775002/226119562-e908aab1-efdf-400e-b8ab-1d66dc92866b.png)
+
+
+a. [customer Dashboard file](https://github.com/Ankhi12/ReactExercises/blob/main/customerDashboard.html)
+
+b. [customer Data JS dummy data file](https://github.com/Ankhi12/ReactExercises/blob/main/customer-data.js)
