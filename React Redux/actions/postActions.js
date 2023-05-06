@@ -4,10 +4,7 @@ import { POSTSDATA,ERRORDATA } from '../types'
 export const getPosts = ()=>async dispatch=>{
     try{
         const posts = await axios.get(`https://jsonplaceholder.typicode.com/posts`)
-        dispatch( {
-            type: POSTSDATA,
-            payload: posts.data
-        })
+        dispatch(setPosts(posts))
     }
     catch(e){
         dispatch({
