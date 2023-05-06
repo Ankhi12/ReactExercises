@@ -5,3 +5,7 @@
 
 ![image](https://user-images.githubusercontent.com/124775002/236607614-342ba6f8-b998-4ab7-9c84-8c38414fc865.png)
 
+Final Output will look like below, however you can play around with the colors -
+![image](https://user-images.githubusercontent.com/124775002/236608475-8e681137-7d82-456c-b766-0e07c131e524.png)
+
+
