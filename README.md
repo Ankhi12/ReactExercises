@@ -30,3 +30,7 @@ This repository has some basic React challenges that will help you clarify basic
 a. [customer Dashboard file](https://github.com/Ankhi12/ReactExercises/blob/main/customerDashboard.html)
 
 b. [customer Data JS dummy data file](https://github.com/Ankhi12/ReactExercises/blob/main/customer-data.js)
+
+c. [React Authorization Project](https://github.com/Ankhi12/ReactExercises/tree/main/React-Authorization-without-Redux-Skeleton)
+
+d. [React To Do List Project](https://github.com/Ankhi12/ReactExercises/tree/main/To%20Do%20List)
