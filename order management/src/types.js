@@ -1,0 +1,2 @@
+export const FORMDATA = 'FORMDATA'
+export const EDITFORMDATA = 'EDITFORMDATA'
