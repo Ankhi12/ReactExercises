@@ -1,7 +1,11 @@
 # React Hooks
 1. Read this [medium article](https://medium.com/@ankhi./react-hooks-with-a-cheatsheet-c3f0d347ecf1) for a summary on React Hooks.
 
-3. Refer to this [React Hook cheatsheet](https://github.com/Ankhi12/ReactExercises/blob/main/ReactHookCheatSheet.pdf) for quick reference. If this content is of any use for you, please give this repository a star and follow me on medium.
+2. Refer to this [React Hook cheatsheet](https://github.com/Ankhi12/ReactExercises/blob/main/ReactHookCheatSheet.pdf) for quick reference. 
+
+Kindly Zoom in the PDF for readibility.
+
+If this content is of any use for you, please give this repository a star and follow me on medium.
 This will encourage me to create similar contents.
 
 # ReactExercises
