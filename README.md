@@ -1,3 +1,8 @@
+# React Hooks
+Read this medium article for a summary on React Hooks.
+Refer to this React Hook cheatsheet for quick reference. If this content is of any use for you, please give this repository a star and follow me on medium.
+This will encourage me to create similar contents.
+
 # ReactExercises
 This repository has some basic React challenges that will help you clarify basic React concepts.
 
